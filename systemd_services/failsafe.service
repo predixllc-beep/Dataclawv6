@@ -1,0 +1,7 @@
+[Unit]
+Description=DataClaw Emergency Failsafe Trigger
+DefaultDependencies=no
+
+[Service]
+Type=oneshot
+ExecStart=/bin/bash /opt/dataclaw/scripts/trigger_safe_mode.sh

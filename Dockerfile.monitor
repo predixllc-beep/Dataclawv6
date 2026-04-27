@@ -1,0 +1,5 @@
+FROM python:3.11-slim
+WORKDIR /opt/dataclaw
+COPY dataclaw_core/monitoring/health_monitor.py /opt/dataclaw/health_monitor.py
+RUN pip install psutil
+CMD ["python", "health_monitor.py"]

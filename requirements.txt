@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+psutil
+requests
+ollama
+langchain
+pydantic
+supabase
+postgrest
+python-dotenv
+ccxt

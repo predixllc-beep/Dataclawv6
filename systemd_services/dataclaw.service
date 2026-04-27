@@ -1,0 +1,18 @@
+[Unit]
+Description=DataClaw Autonomous Agent Core
+After=docker.service
+Requires=docker.service
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/dataclaw
+ExecStart=/usr/local/bin/docker-compose up agent_core model_router vector_db
+ExecStop=/usr/local/bin/docker-compose down
+Restart=on-failure
+RestartSec=10
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=dataclaw
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,32 @@
+{
+  "models": {
+    "Onyx": {
+      "model": "deepseek-r1:14b",
+      "role": "reasoning",
+      "endpoint": "http://localhost:11434/v1",
+      "backend": "ollama",
+      "description": "High parameters, deep reasoning chain for system optimization and logic mapping."
+    },
+    "OpenClaw": {
+      "model": "codellama:7b",
+      "role": "code_execution",
+      "endpoint": "http://localhost:11434/v1",
+      "backend": "ollama",
+      "description": "Code focused, tool execution, structural modification."
+    },
+    "Mirofish": {
+      "model": "llama3:8b",
+      "role": "low_latency_arbitrage",
+      "endpoint": "http://localhost:8000/v1",
+      "backend": "vLLM",
+      "description": "Realtime, fast token/s output for high speed signal parsing."
+    },
+    "Betafish": {
+      "model": "mistral:7b-instruct",
+      "role": "swarm_coordinator",
+      "endpoint": "http://localhost:11434/v1",
+      "backend": "ollama",
+      "description": "Orchestrates swarm tasks safely."
+    }
+  }
+}

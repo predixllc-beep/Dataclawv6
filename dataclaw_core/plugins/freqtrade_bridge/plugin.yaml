@@ -1,0 +1,7 @@
+name: FreqtradeBridge
+type: execution_and_signal
+description: "Freqtrade REST API Integration Bridge. Discovers signals from Freqtrade strategies and routes executions."
+inputs: ["market_data"]
+outputs: ["signal", "execution", "backtest_results"]
+priority: high
+version: "1.0.0"

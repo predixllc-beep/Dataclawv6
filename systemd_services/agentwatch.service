@@ -1,0 +1,13 @@
+[Unit]
+Description=DataClaw Health Monitor
+After=dataclaw.service
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/dataclaw
+ExecStart=/usr/local/bin/docker-compose up monitoring
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
